@@ -1,15 +1,26 @@
 <template name="songItem">
-  <div class="post">
-    <a href="#" class="upvote btn {{upvotedClass}}">⬆</a>
-    <div class="post-content">
-      <h3>{{title}}<span>{{artist}}</span></h3>
-      <p>
-        {{pluralize votes "Vote"}},
-        submitted by {{author}},
-        <a href="{{pathFor 'songPage'}}">{{pluralize commentsCount "comment"}}</a>
-      </p>
+
+  <div class="post" >
+    <div class="col1" style="width:100px; float:left;"><img src="" width="100px"><span>{{album}}</span></div>
+    <div class="col2" style="width:800px; float:left;">
+      <table>
+        <tr><td><span style="font-size:18px; font-weight:bold;">{{title}}</span></td></tr>
+        <tr><td><span>{{artist}}</span></td></tr>
+      </table>
     </div>
-    <a href="{{pathFor 'songPage'}}" class="discuss btn">Discuss</a>
-    {{#if ownSong}}<a href="{{pathFor 'songEdit'}}" class="edit btn">Edit</a>{{/if}}
+
+    <div class="col4" style="min-width:60px; float:right;">                        
+      {{#if ownSong}}<a style="margin-left:10px;" href="{{pathFor 'songEdit'}}" class="edit btn">Edit</a>{{/if}}
+      <a href="{{pathFor 'songPage'}}" class="discuss btn">Talk</a>
+    </div>
+
+    <div style="float:right">
+      <div class="col3" style="min-width:60px; float:left; text-align:right; marin-left:10px;"><div class="col3wrap" style="float:left; width:100%; text-align:right;"><span style="float:right; margin-right:20px; margin-top: 13px; text-align:right;">{{votes}}</span></div></div>
+      <div class="col3-1" style="float:left; width:60px;">
+        <div class="col3wrap" style="float:left;"><a style="float:left;" href="#" class="upvote btn btn-primary {{upvotedClass}}">{{#if upvotable}}⬆{{else}}⬇{{/if}}</a></div>
+      </div>
+    </div>
+
   </div>
+  
 </template>
