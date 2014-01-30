@@ -19,6 +19,7 @@ Meteor.methods({
         throw (new Meteor.Error(500, 'Failed to save file.', err));
       } else {
         console.log('The file ' + name + ' (' + encoding + ') was saved to ' + path);
+       // Meteor.call('saveUploadToCollection', name, callBack);
       }
     }); 
  
@@ -31,5 +32,9 @@ Meteor.methods({
     function cleanName(str) {
       return str.replace(/\.\./g,'').replace(/\//g,'');
     }
+  },
+  
+  saveUploadToCollection: function (name){
+  	Songs.insert({name:name});
   }
 });

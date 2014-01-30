@@ -11,3 +11,6 @@ accounts-ui-bootstrap-dropdown
 accounts-password
 npm
 collectionFS
+insecure
+iron-router
+streams
