@@ -1,0 +1,15 @@
+<template name="songItem">
+  <div class="post">
+    <a href="#" class="upvote btn {{upvotedClass}}">⬆</a>
+    <div class="post-content">
+      <h3>{{title}}<span>{{artist}}</span></h3>
+      <p>
+        {{pluralize votes "Vote"}},
+        submitted by {{author}},
+        <a href="{{pathFor 'songPage'}}">{{pluralize commentsCount "comment"}}</a>
+      </p>
+    </div>
+    <a href="{{pathFor 'songPage'}}" class="discuss btn">Discuss</a>
+    {{#if ownSong}}<a href="{{pathFor 'songEdit'}}" class="edit btn">Edit</a>{{/if}}
+  </div>
+</template>

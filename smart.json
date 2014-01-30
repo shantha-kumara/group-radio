@@ -1,5 +1,10 @@
 {
   "packages": {
-    "accounts-ui-bootstrap-dropdown": {}
+    "iron-router": {},
+    "accounts-ui-bootstrap-dropdown": {},
+    "spin": {},
+    "iron-router-progress": {},
+    "npm": {},
+    "collectionFS": {}
   }
 }
