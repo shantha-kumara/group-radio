@@ -26,6 +26,10 @@ Meteor.methods({
       throw new Meteor.Error(422, 'Please fill in the song title');
     
     /* ensure the post has a title */
+    if (!songAttributes.album)
+      throw new Meteor.Error(422, 'Please fill in the song album');
+    
+    /* ensure the post has a title */
     if (!songAttributes.artist)
       throw new Meteor.Error(422, 'Please fill in the song artist');
     
@@ -53,7 +57,7 @@ Meteor.methods({
     }
 
     /* pick out the whitelisted keys */
-    var song = _.extend(_.pick(songAttributes, 'artist', 'title', 'language', 'year', 'genre', 'description' ), {
+    var song = _.extend(_.pick(songAttributes, 'artist', 'title', 'language', 'year', 'genre', 'description', 'FileName', 'album' ), {
       userId: user._id, 
       author: user.username, 
       submitted: new Date().getTime(),

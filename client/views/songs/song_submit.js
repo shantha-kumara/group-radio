@@ -10,7 +10,8 @@ Template.songSubmit.events({
       year: $(e.target).find('[name=year]').val(),
       genre: $(e.target).find('[name=genre]').val(),
       description: $(e.target).find('[name=description]').val(),
-      fileName: Session.get('fname')
+      fileName: Session.get('fname'),
+      album: $(e.target).find('[name=album]').val()
     }
 
     Meteor.call('postSong', song, function(error, id) {
