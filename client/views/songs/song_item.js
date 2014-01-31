@@ -2,23 +2,24 @@ Template.songItem.helpers({
   ownSong: function() {
     return this.userId == Meteor.userId();
   },
-  domain: function() {
-    var a = document.createElement('a');
-    a.href = this.url;
-    return a.hostname;
+
+  upvotable: function ( ) {
+    var userId = Meteor.userId();
+    return (!userId || userId && !_.include(this.upvoters, userId));
   },
+
   upvotedClass: function() {
     var userId = Meteor.userId();
     if (userId && !_.include(this.upvoters, userId)) {
       return 'btn-primary upvotable';
     } else {
-      return 'disabled';
+      return 'btn-primary downvotable';
     }
   }
 });
 
 Template.songItem.rendered = function(){
-  
+
   // animate post from previous position to new position
   var instance = this;
   var rank = instance.data._rank;
@@ -49,5 +50,9 @@ Template.songItem.events({
   'click .upvotable': function(e) {
     e.preventDefault();
     Meteor.call('upvote', this._id);
+  },
+  'click .downvotable': function(e) {
+    e.preventDefault();
+    Meteor.call('downvote', this._id);
   }
 });

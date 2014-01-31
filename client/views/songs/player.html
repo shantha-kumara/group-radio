@@ -1,0 +1,8 @@
+<template name="player">
+	{{#if currentUser}}
+	<audio preload id="player">
+		<source src="{{streamServerUrl}}" />
+	</audio>
+	<img class="player-controler" src="../images/pause.png">
+	{{/if}}
+</template>

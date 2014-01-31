@@ -1,5 +1,6 @@
 Template.songsList.helpers({
   songsWithRank: function() {
+
     this.songs.rewind();
     return this.songs.map(function(song, index, cursor) {
       song._rank = song.votes;
