@@ -5,6 +5,7 @@
     "spin": {},
     "iron-router-progress": {},
     "npm": {},
-    "collectionFS": {}
+    "collectionFS": {},
+    "crypto-md5": {}
   }
 }

@@ -7,7 +7,8 @@
       "spin": {},
       "iron-router-progress": {},
       "npm": {},
-      "collectionFS": {}
+      "collectionFS": {},
+      "crypto-md5": {}
     },
     "packages": {
       "iron-router": {
@@ -40,10 +41,20 @@
         "tag": "v0.3.7",
         "commit": "34d9fb363472e44c6dba4a1473a9e106e107f5a9"
       },
+      "crypto-md5": {
+        "git": "https://github.com/oortcloud/meteor-crypto-md5.git",
+        "tag": "v3.1.2.2",
+        "commit": "75bbb3eeace302122d3554a6212a6fe92553fa18"
+      },
       "cfs-public-folder": {
         "git": "https://github.com/nooitaf/meteor-cfs-public-folder.git",
         "tag": "v0.0.3",
         "commit": "581c716424b374efb6f611110002621f9cc9212b"
+      },
+      "crypto-base": {
+        "git": "https://github.com/oortcloud/meteor-crypto-base.git",
+        "tag": "v3.1.2.1",
+        "commit": "5df8d82a0595553415bbfae2930c6ecbeece5794"
       }
     }
   }

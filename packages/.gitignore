@@ -1,4 +1,10 @@
 /iron-router
 /spin
 /accounts-ui-bootstrap-dropdown
+<<<<<<< HEAD
+/streams
+=======
 /iron-router-progress
+>>>>>>> aa55a0e2a5429a630ecc23e9cf98ad44cf7cb576
+/crypto-md5
+/crypto-base

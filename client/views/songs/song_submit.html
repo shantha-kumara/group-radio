@@ -1,5 +1,5 @@
 <template name="songSubmit">
-  <form class="main">
+  <form class="main" enctype="multipart/form-data">
 
     <div class="control-group">
         <label class="control-label" for="title">Title</label>
@@ -8,10 +8,17 @@
         </div>
     </div>
 
+	<div class="control-group">
+		<label class="control-label" for="artist">Album</label>
+		<div class="controls">
+		    <input name="album" type="text" value="" placeholder="Name song album"/>
+		</div>
+	    </div>
+
     <div class="control-group">
         <label class="control-label" for="artist">Artist</label>
         <div class="controls">
-            <input name="artist" type="text" value=""/>
+            <input name="artist" type="text" value="" placeholder="Name song artist"/>
         </div>
     </div>
 
@@ -40,6 +47,13 @@
         <label class="control-label" for="description">Description</label>
         <div class="controls">
             <textarea name="description" type="text" value="" placeholder="Description of the song"/>
+        </div>
+    </div>
+    
+	<div class="control-group">
+        <label class="control-label" for="genre">Song</label>
+        <div class="controls">
+            <input name="upload" type="file" placeholder="Upload song"/>
         </div>
     </div>
 
